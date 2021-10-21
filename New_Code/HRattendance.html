@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TransactGlobal | Dashboard</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+ <!--  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"> -->
+  <!-- Tempusdominus Bootstrap 4 -->
+ <!--  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css"> -->
+  <!-- iCheck -->
+  <!--  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css"> -->
+ <!--  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css"> -->
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <!-- <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css"> -->
+  <!-- summernote -->
+  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css">
+ 
+  <link href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet" /> 
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script><script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+ <!--  <link href="/resources/demos/style.css" rel="stylesheet" /> -->
+  
+  <style>
+    table, th, td {
+              border:2px solid black;
+              text-align: center;
+              
+
+            }
+            th{
+              background-color: black;
+              color:white;
+              text-align: center;
+              
+            }
+
+            .divScroll {
+overflow:scroll;
+height:70%;
+width:100%;
+}
+            
+  </style>
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+  <!-- Preloader -->
+  <div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+  </div>
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="index3.html" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">Contact</a>
+      </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Navbar Search -->
+      <li class="nav-item">
+        <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+          <i class="fas fa-search"></i>
+        </a>
+        <div class="navbar-search-block">
+          <form class="form-inline">
+            <div class="input-group input-group-sm">
+              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+              <div class="input-group-append">
+                <button class="btn btn-navbar" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </li>
+
+      <!-- Messages Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-comments"></i>
+          <span class="badge badge-danger navbar-badge">3</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+        </div>
+      </li>
+      <!-- Notifications Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-bell"></i>
+          <span class="badge badge-warning navbar-badge">15</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <span class="dropdown-item dropdown-header">15 Notifications</span>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-envelope mr-2"></i> 4 new messages
+            <span class="float-right text-muted text-sm">3 mins</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-users mr-2"></i> 8 friend requests
+            <span class="float-right text-muted text-sm">12 hours</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-file mr-2"></i> 3 new reports
+            <span class="float-right text-muted text-sm">2 days</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+          <i class="fas fa-expand-arrows-alt"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-widget="control-sidebar" data-controlsidebar-slide="true"  href="#" role="button">
+          <i class="fas fa-th-large"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="index.html" class="brand-link">
+      <img src="dist/img/ts_global_light_logo1-300x138.png" alt="AdminLTE Logo"  style="opacity: .8;width:230px; height:80px;background-color: white;">
+      
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user panel (optional) -->
+      
+      <!-- SidebarSearch Form -->
+      <div class="form-inline">
+        <div class="input-group" data-widget="sidebar-search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+               <li class="nav-item">
+                <a href="./index.html" class="nav-link ">
+                  <i class="fas fa-home"></i>
+                  <p>
+                    Home
+                  
+                  </p>
+                </a>
+                
+              </li>
+              <li class="nav-item">
+                <a href="./RecruitmentDashboard.html" class="nav-link ">
+                  <i class="fas fa-archway"></i>
+                  <p>
+                    Recruitment Dashboard
+                  
+                  </p>
+                </a>
+                
+              </li>
+
+              
+              <li class="nav-item">
+                <a href="./Employee_information.html"  class="nav-link">
+                  <i class="fas fa-user-edit"></i>
+                  <p>
+                    Employee Information 
+                  
+                  </p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a href="#" class="nav-link" >
+                  <i class="fas fa-user-tag"></i>
+                  <p>
+                    Personal Information 
+                  
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item menu-open">
+                <a href="./HRattendance.html" class="nav-link active" >
+                  <i class="fas fa-money-check-alt"></i>
+                  <p>
+                    Payroll
+                  
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link" >
+                  <i class="fas fa-file-signature"></i>
+                  <p>
+                    
+                  Rostering
+    
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fas fa-users"></i>
+                  <p>
+                    
+                  Users
+    
+                  </p>
+                </a>
+              </li>
+    
+              
+              <li class="nav-item">
+                <a href="#" class="nav-link" >
+                  <i class="fas fa-user-check"></i>
+                  <p>
+                    
+                  Rolls
+    
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="./Employee_add_search.html" class="nav-link" >
+                  <i class="fas fa-search"></i>
+                  <p>
+                    
+                  Employee Add/Search
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link" >
+                  <i class="fas fa-money-check-alt"></i>
+                  <p>
+                    
+                  Pay Type
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link" >
+                  <i class="fas fa-address-card"></i>
+                  <p>
+                    
+                  Identity Proofs
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link" >
+                  <i class="fas fa-language"></i>
+                  <p>
+                    
+                  Language
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link" >
+                  <i class="fas fa-users-cog"></i>
+                  <p>
+                    
+                  Position 
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link" >
+                  <i class="fas fa-chalkboard-teacher"></i>
+                  <p>
+                  Progress
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="fas fa-users"></i>
+                  <p>
+                    
+                    Roll Menu Mapping
+                  </p>
+                </a>
+                </li>
+                <li class="nav-item">
+                  <a href="./Assign-Emps-to-team.html" class="nav-link ">
+                    <i class="fas fa-people-arrows"></i>
+                  <p>
+                    
+                   Assign Emps To Team
+                  </p>
+                  </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./Employee_Category.html" class="nav-link">
+                      <i class="fas fa-id-card-alt"></i>
+                    <p>
+                      
+                      Emps Category
+                    </p>
+                      <p>
+                         
+                      </p>
+                    </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">
+                        <i class="fas fa-street-view"></i>
+                      <p>
+                        
+                        Source of WalkIn
+                      </p>
+                        
+                      </a>
+                      </li>
+    
+                      <li class="nav-item">
+                        <a href="#" class="nav-link">
+                          <i class="fas fa-user-minus"></i>
+                        <p>
+                          
+                          UnAssigned Employee
+                        </p>
+                         
+                        </a>
+                        </li>
+    
+                        <li class="nav-item">
+                          <a href="#" class="nav-link">
+                            <i class="fas fa-user-clock"></i>
+                          <p>
+                            
+                            Shift Timing
+                          </p>
+                           
+                          </a>
+                          </li>
+    
+                          <li class="nav-item">
+                            <a href="#" class="nav-link">
+                              <i class="fas fa-file-invoice-dollar"></i>
+                            <p>
+                              
+                              PayRoll Setup
+                            </p>
+                             
+                            </a>
+                            </li>
+    
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                  <i class="fas fa-address-book"></i>
+                                    <p>
+                                      
+                                    Qualification
+                                    </p>
+                                  </i>
+                                </a>
+                              </li>
+                              <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                  <i class="fas fa-envelope-open-text"></i>
+                                    <p>
+                                      
+                                    Un Received Offer Letters 
+                                    </p>
+                                  </i>
+                                </a>
+                              </li>
+                              <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                  <i class="fas fa-university"></i>
+                                    <p>
+                                      
+                                    Bank Names
+                                    </p>
+                                  </i>
+                                </a>
+                              </li>
+                              <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                  <i class="fas fa-sign-in-alt"></i>
+                                    <p>
+                                      
+                                   Web Login Access
+                                    </p>
+                                  </i>
+                                </a>
+                              </li>
+                              <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                  <i class="fas fa-rupee-sign"></i>
+                                    <p>
+                                      
+                                   View Payments 
+                                    </p>
+                                  </i>
+                                </a>
+                              </li>
+    
+                              <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                  <i class="fas fa-hand-holding-usd"></i>
+                                    <p>
+                                      
+                                   Process Salary
+                                    </p>
+                                  </i>
+                                </a>
+                              </li>
+    
+                              <li class="nav-item">
+                                <a href="./BGverification.html" class="nav-link">
+                                  <i class="fas fa-file-invoice"></i>
+                                    <p>
+                                      
+                                   B.G.Verificaation
+                                    </p>
+                                  </i>
+                                </a>
+                              </li>
+                              <li class="nav-item">
+                                <a href="./Holiday_Calendar.html" class="nav-link">
+                                  <i class="far fa-calendar-check"></i>
+                                    <p>
+                                      
+                                   Holiday Calendar
+                                    </p>
+                                  </i>
+                                </a>
+                              </li>
+                              <li class="nav-item">
+                                <a href="./Bulk_Upload_Perks_&_Expenses.html" class="nav-link">
+                                  <i class="fas fa-comment-dollar"></i>
+                                    <p>
+                                      
+                                   Bulk Upload Perks & Expenses
+                                    </p>
+                                  </i>
+                                </a>
+                              </li>
+                              <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                  <i class="fas fa-file-import"></i>
+                                    <p>
+                                      
+                                   Document Upload 
+                                    </p>
+                                  </i>
+                                </a>
+                              </li>
+                              <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                  <i class="fas fa-passport"></i>
+                                    <p>
+                                      
+                                   IP Address List 
+                                    </p>
+                                  </i>
+                                </a>
+                              </li>
+    
+                              <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                  <i class="fas fa-unlock-alt"></i>
+                                    <p>
+                                      
+                                   Change Password
+                                    </p>
+                                  </i>
+                                </a>
+                              </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0"></h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              
+              
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <div class="col-sm-12">
+      <div class="row">
+    <div class="col-sm-6">
+      
+      <h1 class="m-0">Payroll Information</h1>
+    </div>
+          <div class="col-sm-6">
+      <img  class="animation__shake" src="dist/img/1.2.png" />
+      <img  class="animation__shake" src="dist/img/2.2.png" />
+      
+      <label style="padding-left: 30%;padding-right: 3%;">page  :</label> 
+      <select name="pages" id="pages" style="width: 8%;">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+      </select>
+    
+      </div>
+    </div>
+        </div><!-- /.col -->
+    <section class="content">
+           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 
+            <div class="box" style="
+                                      top: 20%;
+                                      width:100%;
+                                      height: 120%;
+                                      background: rgba(240, 234, 234, 0.8);
+                                      box-shadow: 0 15px 25px rgb(0 0 0 / 50%);"
+                                      >
+                                      
+                <div class="row">
+                  
+                    <label style="padding-left: 20px;padding-right:2%;"> select :</label>
+                  
+                  
+                  <div class="col-sm-1">
+                  <select name="manager" id="manager" >
+                    <option value="Sep">Sep</option>
+                    <option value="oct">oct</option>
+                    <option value="Nov">Nov</option>
+                    <option value="Dec">Dec</option>
+                    <option value="Jan">Jan</option>
+                    <option value="Feb">Feb</option>
+                    <option value="Mar">Mar</option>
+                  </select>
+                </div>
+                <div class="col-sm-1">
+                  <select name="manager" id="manager">
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                    <option value="2017">2017</option>
+                    <option value="2016">2016</option>
+                    <option value="2015">2015</option>
+                  </select>
+                </div>
+                <div class="col-sm-2">
+                  <select name="manager" id="manager">
+                    <option value="">-- Manager--</option>
+                    <option value="106-Bopanna C K">106-Bopanna C K</option>
+                    <option value="164-Vijay Kumar M K">164-Vijay Kumar M K</option>
+                    <option value="3954-vimitha">3954-vimitha</option>
+                    <option value="11072-Karthick P">11072-Karthick P</option>
+                    <option value="11826-Abhilasha Saha">11826-Abhilasha Saha</option>
+                    <option value="12544-Laxman Chavan">12544-Laxman Chavan</option>
+                  </select>
+                </div>
+                <div class="col-sm-2">
+                  <select name="manager" id="manager">
+                    <option value="">--Asst. Manager--</option>
+                    <option value="106-Bopanna C K">106-Bopanna C K</option>
+                    <option value="164-Vijay Kumar M K">164-Vijay Kumar M K</option>
+                    <option value="3954-vimitha">3954-vimitha</option>
+                    <option value="11072-Karthick P">11072-Karthick P</option>
+                    <option value="11826-Abhilasha Saha">11826-Abhilasha Saha</option>
+                    <option value="12544-Laxman Chavan">12544-Laxman Chavan</option>
+                  </select>
+                </div>
+                <div class="col-sm-2">
+                  <select name="manager" id="manager">
+                    <option value="">--Process--</option>
+                    <option value="106-Bopanna C K">106-Bopanna C K</option>
+                    <option value="164-Vijay Kumar M K">164-Vijay Kumar M K</option>
+                    <option value="3954-vimitha">3954-vimitha</option>
+                    <option value="11072-Karthick P">11072-Karthick P</option>
+                    <option value="11826-Abhilasha Saha">11826-Abhilasha Saha</option>
+                    <option value="12544-Laxman Chavan">12544-Laxman Chavan</option>
+                  </select>
+                </div>
+             
+                </div>                    
+                      
+                <div class="col-sm-11" style="padding-bottom: 1%;">
+                  <div class="row">
+                  
+                  <div class="col-lg-2" style="padding-left: 10%;">
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+              </div>
+              <div class="col-lg-2">
+                <label style="padding-left: 20%;">  Search By E.code :</label>
+              </div>
+              <div class="col-lg-2" style="padding-right:18%;">
+                <input type="text"  />
+                
+              </div>
+              <div class="col-lg-2" style="padding-right:18%;">
+                <input type="text" />
+                
+              </div>
+              <div class="col-lg-3" >
+                <input type="button"  value="view"  class="col-lg-3" style=" border-radius: 10px;">
+                
+              </div>
+
+              </div>
+              </div>
+              </div>
+
+           </div>
+           <br>
+          
+          <br>
+           <div  class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+             <div class="divScroll">
+              <table style="width: 400%;">
+                <tr >
+                  <th>E.Code</th>
+                  <th>E.Name</th>
+                  <th>Process</th>
+                  <th width="150px">Asst.Manager</th>
+                  <th >Manager</th>
+                  <th>D.O.J</th>
+                  <th>16#10</th>
+                  <th>17#10</th>
+                  <th>18#10</th>
+                  <th>19#10</th>
+                  <th>20#10</th>
+                  <th>21#10</th>
+                  <th>22#10</th>
+                  <th>23#10</th>
+                  <th>24#10</th>
+                  <th>25#10</th>
+                  <th>26#10</th>
+                  <th>27#10</th>
+                  <th>28#10</th>
+                  <th>29#10</th>
+                  <th>30#10</th>
+                  <th>31#10</th>
+                  <th>1#11</th>
+                  <th>2#11</th>
+                  <th>3#11</th>
+                  <th>4#11</th>
+                  <th>5#11</th>
+                  <th>6#11</th>
+                  <th>7#11</th>
+                  <th>8#11</th>
+                  <th>9#11</th>
+                  <th>10#11</th>
+                  <th>11#11</th>
+                  <th>12#11</th>
+                  <th>13#11</th>
+                  <th>14#11</th>
+                  <th>15#11</th>
+                  
+                  
+                </tr>
+                <tr id="myHoverTitle" >
+                  <td>101</td>
+                  <td>vinod kumar</td>
+                  <td>IT</td>
+                  <td width="80px">vijay kumar M K</td>
+                  <td >vijay kumar M K</td>
+                  <td>18-jul-2007</td>
+                  <td><a href="#"  title="I want the below table to be hovered here">CL</a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here">P</a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here">P</a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"><a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  
+                </tr>
+                <tr id="myHoverT2">
+                  <td>1374</td>
+                  <td>Fouzia</td>
+                  <td>HR</td>
+                  <td>Anna sheela P M</td>
+                  <td>Anna Sheela P M </td>
+                  <td>05-Nov-2014</td>
+                  <td><a href="#"  title="I want the below table to be hovered here">CL</a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here">P</a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here">P</a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  
+                </tr>
+                <tr id="myHoverT22">
+                  <td>1352</td>
+                  <td>Ramu</td>
+                  <td>HR</td>
+                  <td>vijay kumar M K</td>
+                  <td>vijay kumar M K</td>
+                  <td>05-Nov-2014</td>
+                  <td><a href="#"  title="I want the below table to be hovered here">CL</a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here">P</a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here">P</a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  
+                </tr>
+                <tr id="myHoverT23">
+                  <td>1235</td>
+                  <td>Krishna</td>
+                  <td>IT</td>
+                  <td>Anna sheela P M</td>
+                  <td>Anna sheela P M</td>
+                  <td>05-Nov-2014</td>
+                  <td><a href="#"  title="I want the below table to be hovered here">CL</a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here">P</a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here">P</a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  
+                </tr>
+                <tr id="myHoverT24">
+                  <td>3954</td>
+                  <td>Vimitha</td>
+                  <td>Training Lead </td>
+                  <td></td>
+                  <td></td>
+                  <td>25-May-2015</td>
+                  <td><a href="#"  title="I want the below table to be hovered here">A</a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here">A</a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here">A</a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  
+                </tr>
+                <tr id="myHoverT25">
+                  <td>7634</td>
+                  <td>Chethan J R</td>
+                  <td>Asst Manager </td>
+                  <td>Venuprakash J</td>
+                  <td>Venuprakash J</td>
+                  <td>02-Nov-2017</td>
+                  <td><a href="#"  title="I want the below table to be hovered here">A</a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here">A</a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here">A</a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  
+                </tr>
+                <tr id="myHoverT26">
+                  <td>8545</td>
+                  <td>Sushanth S</td>
+                  <td>IT</td>
+                  <td>Vijay Kumar M K</td>
+                  <td>Vijay Kumar M K</td>
+                  <td>05-Jan-2018</td>
+                  <td><a href="#"  title="I want the below table to be hovered here">A</a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here">A</a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here">A</a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  <td><a href="#"  title="I want the below table to be hovered here"></a></td>
+                  
+                </tr>
+              </table>
+             
+       <div  style="padding-left: 80%;">
+        <table id="obj1"  bordercolor="black" cellpadding="15px"
+        cellspacing="1" style="width: 100%;display:none; ">
+            <tr >
+                <th>shift-start-time</th>
+                <th>Sync. Hours </th>
+                <th>Changed Hours</th>
+                
+                
+            </tr>
+            <tr style="background-color: rgb(250, 242, 242);color:rgb(12, 11, 11);">
+                <td>09:16</td>
+                <td>0:0</td>
+                <td></td>
+                
+            </tr>
+            <tr>
+              <td colspan="3">shift-start-time : 09:30:00</td>
+              
+             </tr>
+             <tr>
+              <td colspan="3">Longin Time : 20-sep-2021 09:32:16 AM</td>
+              
+             </tr>
+             <tr>
+              <td colspan="3">Last Log Time : 20-sep-2021 07:10:18 PM</td>
+              
+             </tr>
+             <tr>
+              <td colspan="3">System: vinod kumar-PC </td>
+              
+             </tr>
+             <tr>
+              <td colspan="3">OS, Version : window-1.0.0.3 </td>
+              
+             </tr>
+    </table>
+        </div>
+  
+        <table id="obj2"  bordercolor="black" cellpadding="15px"
+        cellspacing="1" style="width:800px;display:none ;">
+        <tr >
+          <th>shift-start-time</th>
+          <th>Sync. Hours </th>
+          <th>Changed Hours</th>
+          
+          
+      </tr>
+            <tr style="background-color: rgb(250, 242, 242);color:rgb(12, 11, 11);">
+              <td>09:16</td>
+              <td>0:0</td>
+              <td></td>
+              
+          </tr>
+          <tr>
+            <td colspan="3">shift-start-time : 09:30:00</td>
+            
+           </tr>
+           <tr>
+            <td colspan="3">Longin Time : 20-sep-2021 09:32:16 AM</td>
+            
+           </tr>
+           <tr>
+            <td colspan="3">Last Log Time : 20-sep-2021 07:10:18 PM</td>
+            
+           </tr>
+           <tr>
+            <td colspan="3">System: Fouzia-PC </td>
+            
+           </tr>
+           <tr>
+            <td colspan="3">OS, Version : window-1.0.0.3 </td>
+            
+           </tr>
+        
+    </table>
+
+    <table id="obj3"  bordercolor="black" cellpadding="15px"
+        cellspacing="1" style="width: 800px;display:none">
+        <tr >
+          <th>shift-start-time</th>
+          <th>Sync. Hours </th>
+          <th>Changed Hours</th>
+          
+          
+      </tr>
+            <tr style="background-color: rgb(250, 242, 242);color:rgb(12, 11, 11);">
+              <td>09:16</td>
+              <td>0:0</td>
+              <td></td>
+              
+          </tr>
+          <tr>
+            <td colspan="3">shift-start-time : 09:30:00</td>
+            
+           </tr>
+           <tr>
+            <td colspan="3">Longin Time : 20-sep-2021 09:32:16 AM</td>
+            
+           </tr>
+           <tr>
+            <td colspan="3">Last Log Time : 20-sep-2021 07:10:18 PM</td>
+            
+           </tr>
+           <tr>
+            <td colspan="3">System: Ramu-PC </td>
+            
+           </tr>
+           <tr>
+            <td colspan="3">OS, Version : window-1.0.0.3 </td>
+            
+           </tr>
+        
+    </table>
+
+    <table id="obj4"  bordercolor="black" cellpadding="15px"
+        cellspacing="1" style="width: 800px;display:none">
+        <tr >
+          <th>shift-start-time</th>
+          <th>Sync. Hours </th>
+          <th>Changed Hours</th>
+          
+          
+      </tr>
+            <tr style="background-color: rgb(250, 242, 242);color:rgb(12, 11, 11);">
+              <td>09:16</td>
+              <td>0:0</td>
+              <td></td>
+              
+          </tr>
+          <tr>
+            <td colspan="3">shift-start-time : 09:30:00</td>
+            
+           </tr>
+           <tr>
+            <td colspan="3">Longin Time : 20-sep-2021 09:32:16 AM</td>
+            
+           </tr>
+           <tr>
+            <td colspan="3">Last Log Time : 20-sep-2021 07:10:18 PM</td>
+            
+           </tr>
+           <tr>
+            <td colspan="3">System: Krishna-PC </td>
+            
+           </tr>
+           <tr>
+            <td colspan="3">OS, Version : window-1.0.0.3 </td>
+            
+           </tr>
+        
+    </table>
+    <table id="obj5"  bordercolor="black" cellpadding="15px"
+    cellspacing="1" style="width: 800px;display:none">
+    <tr >
+      <th>shift-start-time</th>
+      <th>Sync. Hours </th>
+      <th>Changed Hours</th>
+      
+      
+  </tr>
+        <tr style="background-color: rgb(250, 242, 242);color:rgb(12, 11, 11);">
+          <td>09:16</td>
+          <td>0:0</td>
+          <td></td>
+          
+      </tr>
+      <tr>
+        <td colspan="3">shift-start-time : 09:30:00</td>
+        
+       </tr>
+       <tr>
+        <td colspan="3">Longin Time : 20-sep-2021 09:32:16 AM</td>
+        
+       </tr>
+       <tr>
+        <td colspan="3">Last Log Time : 20-sep-2021 07:10:18 PM</td>
+        
+       </tr>
+       <tr>
+        <td colspan="3">System: Vimitha-PC </td>
+        
+       </tr>
+       <tr>
+        <td colspan="3">OS, Version : window-1.0.0.3 </td>
+        
+       </tr>
+    
+</table>
+
+<table id="obj6"  bordercolor="black" cellpadding="15px"
+cellspacing="1" style="width: 800px;display:none">
+<tr >
+  <th>shift-start-time</th>
+  <th>Sync. Hours </th>
+  <th>Changed Hours</th>
+  
+  
+</tr>
+    <tr style="background-color: rgb(250, 242, 242);color:rgb(12, 11, 11);">
+      <td>09:16</td>
+      <td>0:0</td>
+      <td></td>
+      
+  </tr>
+  <tr>
+    <td colspan="3">shift-start-time : 09:30:00</td>
+    
+   </tr>
+   <tr>
+    <td colspan="3">Longin Time : 20-sep-2021 09:32:16 AM</td>
+    
+   </tr>
+   <tr>
+    <td colspan="3">Last Log Time : 20-sep-2021 07:10:18 PM</td>
+    
+   </tr>
+   <tr>
+    <td colspan="3">System: Chethan-PC </td>
+    
+   </tr>
+   <tr>
+    <td colspan="3">OS, Version : window-1.0.0.3 </td>
+    
+   </tr>
+
+</table>
+
+<table id="obj7"  bordercolor="black" cellpadding="15px"
+cellspacing="1" style="width:1200px;display:none">
+<tr >
+  <th>shift-start-time</th>
+  <th>Sync. Hours </th>
+  <th>Changed Hours</th>
+  
+  
+</tr>
+    <tr style="background-color: rgb(250, 242, 242);color:rgb(12, 11, 11);">
+      <td>09:16</td>
+      <td>0:0</td>
+      <td></td>
+      
+  </tr>
+  <tr>
+    <td colspan="3">shift-start-time : 09:30:00</td>
+    
+   </tr>
+   <tr>
+    <td colspan="3">Longin Time : 20-sep-2021 09:32:16 AM</td>
+    
+   </tr>
+   <tr>
+    <td colspan="3">Last Log Time : 20-sep-2021 07:10:18 PM</td>
+    
+   </tr>
+   <tr>
+    <td colspan="3">System: Sushanth-PC </td>
+    
+   </tr>
+   <tr>
+    <td colspan="3">OS, Version : window-1.0.0.3 </td>
+    
+   </tr>
+
+</table>
+    
+            
+
+
+           </div>
+
+
+
+           </div>
+          </section>
+          <!-- right col -->
+        </div>
+        <!-- /.row (main row) -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <script>
+    $(function() {
+         $( '#myHoverTitle' ).tooltip({ content: $('#obj1').html() });
+     });
+ 
+     $(function() {
+         $( '#myHoverT2' ).tooltip({ content: $('#obj2').html() });
+     });
+
+     $(function() {
+         $( '#myHoverT22' ).tooltip({ content: $('#obj3').html() });
+     });
+
+     $(function() {
+         $( '#myHoverT23' ).tooltip({ content: $('#obj4').html() });
+     });
+     $(function() {
+         $( '#myHoverT24' ).tooltip({ content: $('#obj5').html() });
+     });
+
+     $(function() {
+         $( '#myHoverT25' ).tooltip({ content: $('#obj6').html() });
+     });
+     $(function() {
+         $( '#myHoverT26' ).tooltip({ content: $('#obj7').html() });
+     });
+
+     
+</script>
+
+  
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+   <strong>Copyright &copy; 
+    <script type="text/javascript">var year = new Date();document.write(year.getFullYear());</script>  <a href="https://transactglobal.com/">Transact BPO Services India Pvt Ltd </a>.</strong>
+      All rights reserved.
+      <div class="float-right d-none d-sm-inline-block">
+       <b>Version</b> 1.0.0-Beta   </div>
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<!-- <script src="plugins/jquery/jquery.min.js"></script> -->
+<!-- jQuery UI 1.11.4 -->
+<!-- <script src="plugins/jquery-ui/jquery-ui.min.js"></script> -->
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<!-- <script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script> -->
+<!-- <link href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet" />
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <link href="/resources/demos/style.css" rel="stylesheet" /> -->
+<!-- Bootstrap 4 -->
+<!-- <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+<!-- ChartJS -->
+<!-- <script src="plugins/chart.js/Chart.min.js"></script> -->
+<!-- Sparkline -->
+<!-- <script src="plugins/sparklines/sparkline.js"></script> -->
+<!-- JQVMap -->
+<!-- <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script> -->
+<!-- jQuery Knob Chart -->
+<!-- <script src="plugins/jquery-knob/jquery.knob.min.js"></script> -->
+<!-- daterangepicker -->
+<!-- <script src="plugins/moment/moment.min.js"></script>
+<script src="plugins/daterangepicker/daterangepicker.js"></script> -->
+<!-- Tempusdominus Bootstrap 4 -->
+<!-- <script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script> -->
+<!-- Summernote -->
+<!-- <script src="plugins/summernote/summernote-bs4.min.js"></script> -->
+<!-- overlayScrollbars -->
+<!-- <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script> -->
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.js"></script>
+<!-- AdminLTE for demo purposes -->
+<!-- <script src="dist/js/demo.js"></script> -->
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<!-- <script src="dist/js/pages/dashboard.js"></script> -->
+</body>
+</html>
